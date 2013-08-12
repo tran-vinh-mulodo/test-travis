@@ -15,7 +15,7 @@ development:
   database: sty_db
   pool: 5
   username: root
-  password: "123456"
+  password: ""
   host: localhost
   port: 3306
 
@@ -29,7 +29,7 @@ test:
   database: sty_db_test
   pool: 5
   username: root
-  password: "123456"
+  password: ""
   host: localhost
   port: 3306
 
@@ -40,6 +40,6 @@ production:
   database: sty_db_product
   pool: 5
   username: root
-  password: "123456"
+  password: ""
   host: localhost
   port: 3306
