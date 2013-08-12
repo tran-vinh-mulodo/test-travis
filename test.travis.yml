@@ -1,2 +1,16 @@
+language: ruby
+
+# creates 3 variable build maxtix. 1 each for a different RVM version
+rvm:
+  - 2.0.0
+  - 1.9.3
+
+# adds 3 variables to each build matrix.
+env:
+  #- DB=sqlite
+  - DB=mysql
+  #- DB=postgresql
 before_script:
-  bundle install
+  - rake db:create
+  - rake db:migrate
+  - rake db:test:prepare
