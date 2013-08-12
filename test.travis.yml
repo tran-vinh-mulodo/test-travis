@@ -7,13 +7,13 @@ rvm:
 
 # adds 3 variables to each build matrix.
 env:
-  #- DB=sqlite
-  - DB=mysql
+  - DB=sqlite
+  #- DB=mysql
   #- DB=postgresql
 before_script:
-  - mysql -e 'create database sty_db;'
-  - mysql -e 'create database sty_db_test;'
-  - mysql -e 'create database sty_db_product;'
+  #- mysql -e 'create database sty_db;'
+  #- mysql -e 'create database sty_db_test;'
+  #- mysql -e 'create database sty_db_product;'
   - rake db:create
   - rake db:migrate
   - rake db:test:prepare
