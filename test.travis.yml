@@ -15,6 +15,6 @@ before_script:
   #- mysql -e 'create database sty_db_test;'
   #- mysql -e 'create database sty_db_product;'
   - bundle install --deployment
-  - rake db:create
   - rake db:migrate
+  - rake db:create
   - rake db:test:prepare
