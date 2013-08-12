@@ -25,17 +25,21 @@ development:
 test:
   adapter: mysql2
   encoding: utf8
-  database: RAndITest_test
+  reconnect: false
+  database: sty_db_test
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: "123456"
+  host: localhost
+  port: 3306
 
 production:
   adapter: mysql2
   encoding: utf8
-  database: RAndITest_production
+  reconnect: false
+  database: sty_db_product
   pool: 5
   username: root
-  password:
-  socket: /tmp/mysql.sock
+  password: "123456"
+  host: localhost
+  port: 3306
